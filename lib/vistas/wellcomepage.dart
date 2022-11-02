@@ -18,7 +18,7 @@ class wellcomepage extends StatelessWidget {
         width: 280,
         height: screenHeight * 9,
         decoration: BoxDecoration(
-          color: const Color(0xFFF2E8DF),
+          color: Color.fromARGB(255, 0, 0, 0),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
@@ -27,7 +27,7 @@ class wellcomepage extends StatelessWidget {
             titleText("Bienvenido"),
             const Spacer(flex: 1),
             subTitleText(
-                "En este restaurante encontraras deliciosas comidas, que te llevaran a un estado de extasis inimaginable"),
+                "TRISTE ES AMAR Y NO SER AMADO PERO MÁS TRISTE ES ESTAR A DIETA EN MEDIO DE UN ASADO"),
             const Spacer(flex: 2),
             const Image(image: AssetImage("assets/imagen.png")),
             const Spacer(),
@@ -37,7 +37,7 @@ class wellcomepage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return signinpage();
+                    return Signinpage();
                   },
                 ),
               );

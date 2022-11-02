@@ -3,8 +3,8 @@ import 'package:menu/vistas/domicilio.dart';
 import 'package:menu/vistas/menu.dart';
 import 'package:menu/widgets/wcWidgets.dart';
 
-class signinpage extends StatelessWidget {
-  signinpage({Key? key}) : super(key: key);
+class Signinpage extends StatelessWidget {
+  Signinpage({Key? key}) : super(key: key);
 
   double screenHeight = 0.0;
   @override
@@ -51,7 +51,7 @@ class signinpage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return domicilio();
+                    return Domicilio();
                   },
                 ),
               );

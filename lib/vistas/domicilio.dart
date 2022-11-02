@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:menu/vistas/factura.dart';
 import 'package:menu/widgets/wcWidgets.dart';
 
-class domicilio extends StatelessWidget {
-  domicilio({super.key});
+class Domicilio extends StatelessWidget {
+  Domicilio({super.key});
 
   double screenHeight = 0.0;
   @override
