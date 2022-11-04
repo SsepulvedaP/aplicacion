@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 GestureDetector largeButton(
   VoidCallback function,
   Color bgColor,
-  String text,
+  Text text,
 ) {
   return GestureDetector(
     onTap: function,
     child: Container(
-      width: 180,
+      width: 200,
       height: 40,
       decoration: BoxDecoration(
         color: bgColor,
@@ -17,7 +17,20 @@ GestureDetector largeButton(
           width: 1,
         ),
       ),
-      child: Center(child: Text(text)),
+      child: Center(
+          child: Column(
+        children: [
+          Text(
+            "Registrarse",
+            style: TextStyle(
+              fontSize: 30,
+              color: Color.fromARGB(139, 217, 217, 217),
+              fontWeight: FontWeight.bold,
+              fontFamily: "Gagaline",
+            ),
+          ),
+        ],
+      )),
     ),
   );
 }
@@ -40,5 +53,27 @@ Text subTitleText(String text) {
       fontWeight: FontWeight.w300,
     ),
     textAlign: TextAlign.center,
+  );
+}
+
+GestureDetector largeButtonlomejor(
+  VoidCallback function,
+  Color bgColor,
+  String text,
+) {
+  return GestureDetector(
+    onTap: function,
+    child: Container(
+      width: 400,
+      height: 100,
+      decoration: BoxDecoration(
+        color: bgColor,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          width: 1,
+        ),
+      ),
+      child: Center(child: Text(text)),
+    ),
   );
 }

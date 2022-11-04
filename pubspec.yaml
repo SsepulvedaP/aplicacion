@@ -40,6 +40,16 @@ flutter:
   - assets/pastas.png
   - assets/sedes.png
   - assets/factural.png
+  - assets/logoPicadas.png
+  - assets/lomejor.png
+  
+
+  fonts:
+  - family: Gagaline
+    fonts:
+      - asset: fonts/Gagalin-Regular.otf
+
+
   
 
   

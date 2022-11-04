@@ -55,7 +55,17 @@ class Signinpage extends StatelessWidget {
                   },
                 ),
               );
-            }, Colors.cyan, "Registrarse"),
+            },
+                Colors.cyan,
+                const Text(
+                  "Registrarse",
+                  style: TextStyle(
+                    fontSize: 50,
+                    color: Color.fromARGB(200, 244, 187, 112),
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Gagaline",
+                  ),
+                )),
             const Spacer(),
             subTitleText(
                 "El mejor restaurante, lo que te imagines eso lo hacemos"),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:menu/vistas/lomejor.dart';
 import 'package:menu/vistas/menu.dart';
 import 'package:menu/vistas/menu_p.dart';
 import 'package:menu/vistas/sedes.dart';
@@ -15,21 +16,32 @@ class wellcomepage extends StatelessWidget {
 
     return Center(
       child: Container(
-        width: 280,
+        width: 415,
         height: screenHeight * 9,
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 0, 0, 0),
+          color: Colors.black,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
           children: [
             const Spacer(flex: 2),
-            titleText("Bienvenido"),
+            const Text(
+              "Bienvenido",
+              style: TextStyle(
+                fontSize: 50,
+                color: Color.fromARGB(200, 244, 187, 112),
+                fontWeight: FontWeight.bold,
+                fontFamily: "Gagaline",
+              ),
+            ),
+
             const Spacer(flex: 1),
             subTitleText(
                 "TRISTE ES AMAR Y NO SER AMADO PERO MÁS TRISTE ES ESTAR A DIETA EN MEDIO DE UN ASADO"),
             const Spacer(flex: 2),
-            const Image(image: AssetImage("assets/imagen.png")),
+            const Image(
+                image:
+                    AssetImage("assets/logoPicadas.png")), //Imagen innecesaria
             const Spacer(),
             largeButton(() {
               //Aqui va la función
@@ -37,11 +49,21 @@ class wellcomepage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return Signinpage();
+                    return lomejor();
                   },
                 ),
               );
-            }, Colors.transparent, "Registrarse"),
+            },
+                Colors.black,
+                const Text(
+                  "Registrarse",
+                  style: TextStyle(
+                    fontSize: 50,
+                    color: Color.fromARGB(200, 244, 187, 112),
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Gagaline",
+                  ),
+                )),
             const Spacer(flex: 1),
             largeButton(() {
               Navigator.push(
@@ -52,7 +74,17 @@ class wellcomepage extends StatelessWidget {
                   },
                 ),
               );
-            }, Colors.cyan, "Menu parrilla"),
+            },
+                Colors.black,
+                const Text(
+                  "Verito",
+                  style: TextStyle(
+                    fontSize: 50,
+                    color: Color.fromARGB(200, 244, 187, 112),
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Gagaline",
+                  ),
+                )),
             const Spacer(),
             largeButton(() {
               Navigator.push(
@@ -63,7 +95,17 @@ class wellcomepage extends StatelessWidget {
                   },
                 ),
               );
-            }, Colors.cyan, "Menu pastas"),
+            },
+                Colors.black,
+                const Text(
+                  "Verito",
+                  style: TextStyle(
+                    fontSize: 50,
+                    color: Color.fromARGB(200, 244, 187, 112),
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Gagaline",
+                  ),
+                )),
             const Spacer(),
             largeButton(() {
               //Aqui va la función para ver las sedes
@@ -75,7 +117,17 @@ class wellcomepage extends StatelessWidget {
                   },
                 ),
               );
-            }, Colors.transparent, "Sedes"),
+            },
+                const Color.fromARGB(200, 244, 187, 112),
+                const Text(
+                  "Verito",
+                  style: TextStyle(
+                    fontSize: 50,
+                    color: Color.fromARGB(200, 244, 187, 112),
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Gagaline",
+                  ),
+                )),
           ],
         ),
       ),

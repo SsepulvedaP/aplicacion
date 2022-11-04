@@ -68,7 +68,17 @@ class Domicilio extends StatelessWidget {
                   },
                 ),
               );
-            }, Colors.cyan, "Pedir Domicilio"),
+            },
+                Colors.cyan,
+                const Text(
+                  "Pedir Domicilio",
+                  style: TextStyle(
+                    fontSize: 50,
+                    color: Color.fromARGB(200, 244, 187, 112),
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Gagaline",
+                  ),
+                )),
           ]),
         ),
       ),
