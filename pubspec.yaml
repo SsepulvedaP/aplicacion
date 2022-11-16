@@ -48,6 +48,7 @@ flutter:
   - assets/arma.png
   - assets/sedesi.png
   - assets/sugerencias.png
+  - assets/registro.png
 
   fonts:
   - family: Gagaline

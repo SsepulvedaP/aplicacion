@@ -3,7 +3,7 @@ import 'package:menu/vistas/domicilio.dart';
 import 'package:menu/vistas/menu.dart';
 import 'package:menu/vistas/menu_p.dart';
 import 'package:menu/vistas/sedes.dart';
-import 'package:menu/vistas/signinpage.dart';
+//import 'package:menu/vistas/signinpage.dart';
 import 'package:menu/widgets/wcWidgets.dart';
 
 class signinpage extends StatelessWidget {
@@ -20,7 +20,7 @@ class signinpage extends StatelessWidget {
           width: 415,
           height: screenHeight * 9,
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 0, 0, 0),
+            color: const Color.fromARGB(255, 0, 0, 0),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Column(
@@ -37,7 +37,7 @@ class signinpage extends StatelessWidget {
                     },
                   ),
                 );
-              }, Color.fromARGB(200, 244, 187, 112), "T"),
+              }, const Color.fromARGB(200, 244, 187, 112), "T"),
               const Spacer(),
               largeButtonlomejor(() {
                 Navigator.push(
@@ -48,7 +48,7 @@ class signinpage extends StatelessWidget {
                     },
                   ),
                 );
-              }, Color.fromARGB(200, 244, 187, 112), "ARMA TU PICADA"),
+              }, const Color.fromARGB(200, 244, 187, 112), "ARMA TU PICADA"),
               const Spacer(),
               largeButtonlomejor(() {
                 Navigator.push(
@@ -59,7 +59,7 @@ class signinpage extends StatelessWidget {
                     },
                   ),
                 );
-              }, Color.fromARGB(200, 244, 187, 112), "SEDES"),
+              }, const Color.fromARGB(200, 244, 187, 112), "SEDES"),
               const Spacer(),
               largeButtonlomejor(() {
                 //Aqui va la función para ver las sedes
@@ -71,7 +71,7 @@ class signinpage extends StatelessWidget {
                     },
                   ),
                 );
-              }, Color.fromARGB(200, 244, 187, 112), "SUGERENCIAS"),
+              }, const Color.fromARGB(200, 244, 187, 112), "SUGERENCIAS"),
               const Spacer(),
             ],
           ),

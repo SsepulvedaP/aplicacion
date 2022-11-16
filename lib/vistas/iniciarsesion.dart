@@ -1,10 +1,5 @@
-import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:menu/vistas/lomejor.dart';
-import 'package:menu/vistas/menu.dart';
-import 'package:menu/vistas/menu_p.dart';
-import 'package:menu/vistas/sedes.dart';
-import 'package:menu/vistas/signinpage.dart';
 import 'package:menu/widgets/wcWidgets.dart';
 
 class iniciarsesion extends StatelessWidget {
@@ -88,7 +83,7 @@ class iniciarsesion extends StatelessWidget {
                     width: 30,
                   ),
                   SizedBox(
-                    width: 180,
+                    width: 90,
                     child: TextField(
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(

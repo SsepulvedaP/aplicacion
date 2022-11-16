@@ -1,5 +1,5 @@
-import 'dart:html';
 import 'package:flutter/material.dart';
+import 'package:menu/vistas/Registrarse.dart';
 import 'package:menu/vistas/iniciarsesion.dart';
 import 'package:menu/vistas/lomejor.dart';
 import 'package:menu/vistas/menu.dart';
@@ -61,7 +61,7 @@ class wellcomepage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return iniciarsesion();
+                    return Registrarse();
                   },
                 ),
               );
