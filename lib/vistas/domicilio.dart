@@ -59,7 +59,7 @@ class Domicilio extends StatelessWidget {
               ),
             ),
             const Spacer(flex: 2),
-            largeButton(() {
+            largeButtonlomejor(() {
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -68,17 +68,7 @@ class Domicilio extends StatelessWidget {
                   },
                 ),
               );
-            },
-                Colors.cyan,
-                const Text(
-                  "Pedir Domicilio",
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: Color.fromARGB(200, 244, 187, 112),
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Gagaline",
-                  ),
-                )),
+            }, Colors.cyan, "Pedir Domi"),
           ]),
         ),
       ),

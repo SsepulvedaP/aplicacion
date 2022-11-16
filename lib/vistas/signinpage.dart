@@ -1,76 +1,80 @@
 import 'package:flutter/material.dart';
 import 'package:menu/vistas/domicilio.dart';
 import 'package:menu/vistas/menu.dart';
+import 'package:menu/vistas/menu_p.dart';
+import 'package:menu/vistas/sedes.dart';
+import 'package:menu/vistas/signinpage.dart';
 import 'package:menu/widgets/wcWidgets.dart';
 
-class Signinpage extends StatelessWidget {
-  Signinpage({Key? key}) : super(key: key);
+class signinpage extends StatelessWidget {
+  signinpage({Key? key}) : super(key: key);
 
   double screenHeight = 0.0;
   @override
   Widget build(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: Center(
         child: Container(
-          width: 280,
+          width: 415,
           height: screenHeight * 9,
           decoration: BoxDecoration(
-            color: const Color(0xFFF2E8DF),
+            color: Color.fromARGB(255, 0, 0, 0),
             borderRadius: BorderRadius.circular(10),
           ),
-          child: Column(children: [
-            const Image(image: AssetImage("assets/imagen.png")),
-            const Spacer(flex: 2),
-            titleText("Registrate"),
-            const SizedBox(height: 8),
-            subTitleText("Disfruta de deliciosos menús, hay mucha variedad"),
-            const Spacer(),
-            const SizedBox(
-              width: 180,
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: "User",
-                ),
-              ),
-            ),
-            const SizedBox(height: 10),
-            const SizedBox(
-              width: 180,
-              child: TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  hintText: "Password",
-                ),
-              ),
-            ),
-            const Spacer(),
-            largeButton(() {
-              //Funcion que te manda al menu
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return Domicilio();
-                  },
-                ),
-              );
-            },
-                Colors.cyan,
-                const Text(
-                  "Registrarse",
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: Color.fromARGB(200, 244, 187, 112),
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Gagaline",
+          child: Column(
+            children: [
+              const Image(image: AssetImage("assets/lomejor.png")),
+              const Spacer(),
+              largeButtonlomejor(() {
+                //Aqui va la función
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Domicilio();
+                    },
                   ),
-                )),
-            const Spacer(),
-            subTitleText(
-                "El mejor restaurante, lo que te imagines eso lo hacemos"),
-            const Spacer(flex: 2),
-          ]),
+                );
+              }, Color.fromARGB(200, 244, 187, 112), "T"),
+              const Spacer(),
+              largeButtonlomejor(() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const menu();
+                    },
+                  ),
+                );
+              }, Color.fromARGB(200, 244, 187, 112), "ARMA TU PICADA"),
+              const Spacer(),
+              largeButtonlomejor(() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const menu_p();
+                    },
+                  ),
+                );
+              }, Color.fromARGB(200, 244, 187, 112), "SEDES"),
+              const Spacer(),
+              largeButtonlomejor(() {
+                //Aqui va la función para ver las sedes
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const sedes();
+                    },
+                  ),
+                );
+              }, Color.fromARGB(200, 244, 187, 112), "SUGERENCIAS"),
+              const Spacer(),
+            ],
+          ),
         ),
       ),
     );

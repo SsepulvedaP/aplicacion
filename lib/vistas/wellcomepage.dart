@@ -1,4 +1,6 @@
+import 'dart:html';
 import 'package:flutter/material.dart';
+import 'package:menu/vistas/iniciarsesion.dart';
 import 'package:menu/vistas/lomejor.dart';
 import 'package:menu/vistas/menu.dart';
 import 'package:menu/vistas/menu_p.dart';
@@ -24,7 +26,7 @@ class wellcomepage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const Spacer(flex: 2),
+            const Spacer(flex: 1),
             const Text(
               "Bienvenido",
               style: TextStyle(
@@ -35,99 +37,47 @@ class wellcomepage extends StatelessWidget {
               ),
             ),
 
-            const Spacer(flex: 1),
+            //const Spacer(flex: 1),
             subTitleText(
                 "TRISTE ES AMAR Y NO SER AMADO PERO MÁS TRISTE ES ESTAR A DIETA EN MEDIO DE UN ASADO"),
-            const Spacer(flex: 2),
+            //const Spacer(flex: 1),
             const Image(
                 image:
                     AssetImage("assets/logoPicadas.png")), //Imagen innecesaria
-            const Spacer(),
-            largeButton(() {
+            largeButtonlomejor(() {
               //Aqui va la función
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return lomejor();
+                    return iniciarsesion();
                   },
                 ),
               );
-            },
-                Colors.black,
-                const Text(
-                  "Registrarse",
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: Color.fromARGB(200, 244, 187, 112),
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Gagaline",
-                  ),
-                )),
+            }, Colors.black, "Iniciar Sesión"),
             const Spacer(flex: 1),
-            largeButton(() {
+            largeButtonlomejor(() {
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return const menu();
+                    return iniciarsesion();
                   },
                 ),
               );
-            },
-                Colors.black,
-                const Text(
-                  "Verito",
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: Color.fromARGB(200, 244, 187, 112),
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Gagaline",
-                  ),
-                )),
-            const Spacer(),
-            largeButton(() {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const menu_p();
-                  },
-                ),
-              );
-            },
-                Colors.black,
-                const Text(
-                  "Verito",
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: Color.fromARGB(200, 244, 187, 112),
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Gagaline",
-                  ),
-                )),
-            const Spacer(),
-            largeButton(() {
-              //Aqui va la función para ver las sedes
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const sedes();
-                  },
-                ),
-              );
-            },
-                const Color.fromARGB(200, 244, 187, 112),
-                const Text(
-                  "Verito",
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: Color.fromARGB(200, 244, 187, 112),
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Gagaline",
-                  ),
-                )),
+            }, Colors.black, "Registrarse"),
+            const Spacer(flex: 2),
+            const Text(
+              "TRISTE ES AMAR Y NO SER AMADO PERO MÁS TRISTE ES ESTAR A DIETA EN MEDIO DE UN ASADO",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 15,
+                color: Color.fromARGB(200, 244, 187, 112),
+                fontWeight: FontWeight.bold,
+                fontFamily: "Gagaline",
+              ),
+            ),
+            const Spacer(flex: 1)
           ],
         ),
       ),

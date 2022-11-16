@@ -42,7 +42,12 @@ flutter:
   - assets/factural.png
   - assets/logoPicadas.png
   - assets/lomejor.png
-  
+  - assets/loguito.png
+  - assets/login.png
+  - assets/tradicionales.png
+  - assets/arma.png
+  - assets/sedesi.png
+  - assets/sugerencias.png
 
   fonts:
   - family: Gagaline

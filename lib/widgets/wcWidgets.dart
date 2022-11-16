@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
-GestureDetector largeButton(
-  VoidCallback function,
-  Color bgColor,
-  Text text,
-) {
+GestureDetector largeButton(VoidCallback function, Color bgColor, String text,
+    {required TextStyle style}) {
   return GestureDetector(
     onTap: function,
     child: Container(
@@ -21,8 +18,8 @@ GestureDetector largeButton(
           child: Column(
         children: [
           Text(
-            "Registrarse",
-            style: TextStyle(
+            text,
+            style: const TextStyle(
               fontSize: 30,
               color: Color.fromARGB(139, 217, 217, 217),
               fontWeight: FontWeight.bold,
@@ -64,16 +61,25 @@ GestureDetector largeButtonlomejor(
   return GestureDetector(
     onTap: function,
     child: Container(
-      width: 400,
-      height: 100,
+      width: 180,
+      height: 50,
       decoration: BoxDecoration(
-        color: bgColor,
+        color: const Color.fromARGB(200, 244, 187, 112),
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
-          width: 1,
+          width: 6,
         ),
       ),
-      child: Center(child: Text(text)),
+      child: Center(
+          child: Text(
+        text,
+        style: const TextStyle(
+          fontSize: 20,
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+          fontFamily: "Gagaline",
+        ),
+      )),
     ),
   );
 }
