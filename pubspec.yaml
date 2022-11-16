@@ -49,7 +49,9 @@ flutter:
   - assets/sedesi.png
   - assets/sugerencias.png
   - assets/registro.png
-
+  - assets/Ubicacion 3.png
+  - assets/Ubicacion 2.png
+  - assets/Ubicacion 1.png
   fonts:
   - family: Gagaline
     fonts:
