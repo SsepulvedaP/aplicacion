@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 GestureDetector largeButton(VoidCallback function, Color bgColor, String text,
     {required TextStyle style}) {
@@ -80,6 +81,57 @@ GestureDetector largeButtonlomejor(
           fontFamily: "Gagaline",
         ),
       )),
+    ),
+  );
+}
+
+GestureDetector Button(
+  VoidCallback function,
+  Color bgColor,
+  String text,
+) {
+  return GestureDetector(
+    onTap: function,
+    child: Container(
+      width: 40,
+      height: 40,
+      decoration: BoxDecoration(
+        color: Color.fromARGB(109, 101, 101, 101),
+        borderRadius: BorderRadius.circular(15),
+        border: Border.all(
+          width: 2,
+        ),
+      ),
+      child: Center(
+          child: Text(
+        text,
+        style: const TextStyle(
+          fontSize: 20,
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+          fontFamily: "Gagaline",
+        ),
+      )),
+    ),
+  );
+}
+
+GestureDetector carrito(
+    VoidCallback function, Color bgColor, String text, double ancho) {
+  return GestureDetector(
+    onTap: function,
+    child: Container(
+      margin: EdgeInsets.only(left: 0, top: 5, right: 0, bottom: 5),
+      width: ancho,
+      height: 40,
+      decoration: BoxDecoration(
+        color: bgColor,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          width: 1,
+        ),
+      ),
+      child: Center(child: Text(text)),
     ),
   );
 }

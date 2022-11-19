@@ -3,6 +3,7 @@ import 'package:menu/vistas/menu.dart';
 import 'package:menu/vistas/menu_p.dart';
 import 'package:menu/vistas/sedes.dart';
 import 'package:menu/vistas/signinpage.dart';
+import 'package:menu/vistas/sugerencias.dart';
 import 'package:menu/widgets/wcWidgets.dart';
 
 class lomejor extends StatelessWidget {
@@ -42,7 +43,7 @@ class lomejor extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return signinpage();
+                          return menu_p();
                         },
                       ),
                     );
@@ -65,7 +66,7 @@ class lomejor extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return signinpage();
+                          return menu();
                         },
                       ),
                     );
@@ -111,7 +112,7 @@ class lomejor extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return signinpage();
+                          return sugerencias();
                         },
                       ),
                     );
@@ -119,7 +120,7 @@ class lomejor extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-            ],
+            ], //CHILDREN
           ),
         ),
       ),

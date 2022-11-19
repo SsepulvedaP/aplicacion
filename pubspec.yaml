@@ -20,6 +20,7 @@ dependencies:
   firebase_core: ^2.1.1
   cloud_firestore: ^4.0.3
   provider: ^6.0.4
+  google_nav_bar: ^5.0.6
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +53,10 @@ flutter:
   - assets/Ubicacion 3.png
   - assets/Ubicacion 2.png
   - assets/Ubicacion 1.png
+  - assets/tradicionv.png
+  - assets/armapicada.png
+  - assets/carrito.png
+  - assets/sugerencia.png
   fonts:
   - family: Gagaline
     fonts:

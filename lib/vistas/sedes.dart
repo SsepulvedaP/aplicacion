@@ -10,7 +10,7 @@ class sedes extends StatelessWidget {
     return Scaffold(
         body: Center(
             child: Container(
-      width: 415,
+      width: 225,
       decoration: BoxDecoration(
           color: Color.fromARGB(200, 244, 187, 112),
           border: Border.all(
@@ -63,6 +63,7 @@ class sedes extends StatelessWidget {
           ),
           Image(image: AssetImage("assets/Ubicacion 2.png")),
           Spacer(flex: 1),
+          Image(image: AssetImage("assets/lomejor.png")),
         ],
       ),
     )));
