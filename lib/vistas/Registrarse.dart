@@ -1,9 +1,30 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:menu/vistas/lomejor.dart';
 import 'package:menu/widgets/wcWidgets.dart';
 
 class Registrarse extends StatelessWidget {
   Registrarse({super.key});
+  TextEditingController nombre = TextEditingController();
+  TextEditingController documento = TextEditingController();
+  TextEditingController direccion = TextEditingController();
+  TextEditingController celular = TextEditingController();
+  TextEditingController pass = TextEditingController();
+  final firebase = FirebaseFirestore.instance;
+  registroUsuario() async {
+    try {
+      await firebase.collection('Users').doc().set({
+        "nombre": nombre.text,
+        "Documento": documento.text,
+        "Dirección": direccion.text,
+        "Celular": celular.text,
+        "Contraseña": pass.text,
+      });
+    } catch (e) {
+      print('Erro....' + e.toString());
+    }
+  }
 
   double screenHeight = 0.0;
   @override
@@ -33,7 +54,7 @@ class Registrarse extends StatelessWidget {
             const Image(image: AssetImage("assets/registro.png")),
             const Spacer(),
             Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 20,
                 ),
@@ -53,6 +74,7 @@ class Registrarse extends StatelessWidget {
                 SizedBox(
                   width: 180,
                   child: TextField(
+                    controller: nombre,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       hintText: "Nombre",
@@ -63,7 +85,7 @@ class Registrarse extends StatelessWidget {
             ),
             const Spacer(flex: 1),
             Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 20,
                 ),
@@ -78,14 +100,15 @@ class Registrarse extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 92,
+                  width: 50,
                 ),
                 SizedBox(
-                  width: 90,
+                  width: 180,
                   child: TextField(
+                    controller: documento,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      hintText: "Nombre",
+                      hintText: "Documento",
                     ),
                   ),
                 )
@@ -93,7 +116,7 @@ class Registrarse extends StatelessWidget {
             ),
             const Spacer(flex: 1),
             Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 20,
                 ),
@@ -108,14 +131,15 @@ class Registrarse extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 92,
+                  width: 70,
                 ),
                 SizedBox(
-                  width: 90,
+                  width: 180,
                   child: TextField(
+                    controller: direccion,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      hintText: "Nombre",
+                      hintText: "Direccion",
                     ),
                   ),
                 )
@@ -123,7 +147,7 @@ class Registrarse extends StatelessWidget {
             ),
             const Spacer(flex: 1),
             Row(
-              children: const [
+              children: [
                 SizedBox(
                   width: 20,
                 ),
@@ -138,14 +162,15 @@ class Registrarse extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 92,
+                  width: 87,
                 ),
                 SizedBox(
-                  width: 90,
+                  width: 180,
                   child: TextField(
+                    controller: celular,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      hintText: "Nombre",
+                      hintText: "Celular",
                     ),
                   ),
                 )
@@ -153,11 +178,11 @@ class Registrarse extends StatelessWidget {
             ),
             const Spacer(flex: 1),
             Row(
-              children: const [
-                SizedBox(
+              children: [
+                const SizedBox(
                   width: 20,
                 ),
-                Text(
+                const Text(
                   "Contraseña",
                   textAlign: TextAlign.left,
                   style: TextStyle(
@@ -168,14 +193,15 @@ class Registrarse extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 92,
+                  width: 30,
                 ),
                 SizedBox(
-                  width: 90,
+                  width: 180,
                   child: TextField(
+                    controller: pass,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      hintText: "Nombre",
+                      hintText: "Contraseña",
                     ),
                   ),
                 )
@@ -187,6 +213,7 @@ class Registrarse extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
+                    registroUsuario();
                     return lomejor();
                   },
                 ),

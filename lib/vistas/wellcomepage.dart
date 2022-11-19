@@ -1,11 +1,7 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:menu/vistas/Registrarse.dart';
 import 'package:menu/vistas/iniciarsesion.dart';
-import 'package:menu/vistas/lomejor.dart';
-import 'package:menu/vistas/menu.dart';
-import 'package:menu/vistas/menu_p.dart';
-import 'package:menu/vistas/sedes.dart';
-import 'package:menu/vistas/signinpage.dart';
 import 'package:menu/widgets/wcWidgets.dart';
 
 class wellcomepage extends StatelessWidget {
