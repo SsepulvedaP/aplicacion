@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:menu/vistas/lomejor.dart';
@@ -12,8 +13,11 @@ class Registrarse extends StatelessWidget {
   TextEditingController celular = TextEditingController();
   TextEditingController pass = TextEditingController();
   final firebase = FirebaseFirestore.instance;
+  final firebase_ = FirebaseAuth.instance;
   registroUsuario() async {
     try {
+      await firebase_.createUserWithEmailAndPassword(
+          email: documento.text, password: pass.text);
       await firebase.collection('Users').doc().set({
         "nombre": nombre.text,
         "Documento": documento.text,
@@ -22,7 +26,7 @@ class Registrarse extends StatelessWidget {
         "Contraseña": pass.text,
       });
     } catch (e) {
-      print('Erro....' + e.toString());
+      print('Error....' + e.toString());
     }
   }
 
@@ -90,7 +94,7 @@ class Registrarse extends StatelessWidget {
                   width: 20,
                 ),
                 Text(
-                  "Documento",
+                  "Email",
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontSize: 30,
@@ -108,7 +112,7 @@ class Registrarse extends StatelessWidget {
                     controller: documento,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      hintText: "Documento",
+                      hintText: "Email",
                     ),
                   ),
                 )
